@@ -17,6 +17,13 @@ const routes: Routes = [
             ),
     },
     {
+        path: 'after-content',
+        loadChildren: () =>
+            import('./pages/after-content/after-content.module').then(
+                (m) => m.AfterContentModule
+            ),
+    },
+    {
         path: '',
         redirectTo: 'on-changes',
         pathMatch: 'full',

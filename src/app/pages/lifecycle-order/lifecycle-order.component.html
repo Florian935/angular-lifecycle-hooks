@@ -11,25 +11,92 @@
                 whenever one or more data-bound input properties change.
             </li>
         </ul>
-        <br />
     </li>
-    <li>2. ngOnInit</li>
     <br />
 
-    <li>3. ngDoCheck</li>
+    <li>
+        <strong>2. ngOnInit</strong>
+        <ul>
+            <li>
+                Initialize the directive or component after Angular first
+                displays the data-bound properties and sets the directive or
+                component's input properties. Called once, after the first
+                ngOnChanges(). ngOnInit() is still called even when
+                ngOnChanges() is not (which is the case when there are no
+                template-bound inputs).
+            </li>
+        </ul>
+    </li>
     <br />
 
-    <li>4. ngAfterContentInit</li>
+    <li>
+        <strong>3. ngDoCheck</strong>
+        <ul>
+            <li>
+                Detect and act upon changes that Angular can't or won't detect
+                on its own. Called immediately after ngOnChanges() on every
+                change detection run, and immediately after ngOnInit() on the
+                first run.
+            </li>
+        </ul>
+    </li>
     <br />
 
-    <li>5. ngAfterContentChecked</li>
+    <li>
+        <strong>4. ngAfterContentInit</strong>
+        <ul>
+            <li>
+                Respond after Angular projects external content into the
+                component's view, or into the view that a directive is in.
+            </li>
+        </ul>
+    </li>
     <br />
 
-    <li>6. ngAfterViewInit</li>
+    <li>
+        <strong>5. ngAfterContentChecked</strong>
+        <ul>
+            <li>
+                Called after ngAfterContentInit() and every subsequent
+                ngDoCheck().
+            </li>
+        </ul>
+    </li>
     <br />
 
-    <li>7. ngAfterViewChecked</li>
+    <li>
+        <strong>6. ngAfterViewInit</strong>
+        <ul>
+            <li>
+                Respond after Angular initializes the component's views and
+                child views, or the view that contains the directive. Called
+                once after the first ngAfterContentChecked().
+            </li>
+        </ul>
+    </li>
     <br />
 
-    <li>8. ngOnDestroy</li>
+    <li>
+        <strong>7. ngAfterViewChecked</strong>
+        <ul>
+            <li>
+                Respond after Angular checks the component's views and child
+                views, or the view that contains the directive. Called after the
+                ngAfterViewInit() and every subsequent ngAfterContentChecked().
+            </li>
+        </ul>
+    </li>
+    <br />
+
+    <li>
+        <strong>8. ngOnDestroy</strong>
+        <ul>
+            <li>
+                Cleanup just before Angular destroys the directive or component.
+                Unsubscribe Observables and detach event handlers to avoid
+                memory leaks. Called immediately before Angular destroys the
+                directive or component.
+            </li>
+        </ul>
+    </li>
 </ul>

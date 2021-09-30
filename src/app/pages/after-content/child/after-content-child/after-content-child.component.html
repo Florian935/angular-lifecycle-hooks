@@ -1,0 +1,11 @@
+<h2>Child Component</h2>
+
+<label for="message">Message:</label>
+<input type="text" id="message" #message placeholder="enter a message" />
+<br />
+
+<button (click)="onClick(message.value)">
+    On click, AfterContentChecked is called
+</button>
+
+<ng-content></ng-content>
