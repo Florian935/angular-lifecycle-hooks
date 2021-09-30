@@ -2,7 +2,6 @@ import {
     AfterViewChecked,
     AfterViewInit,
     Component,
-    OnInit,
     ViewChild,
 } from '@angular/core';
 import { AfterViewChildComponent } from './child/after-view-child.component';

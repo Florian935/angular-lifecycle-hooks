@@ -1,9 +1,4 @@
-import {
-    AfterViewChecked,
-    AfterViewInit,
-    Component,
-    OnInit,
-} from '@angular/core';
+import { AfterViewChecked, AfterViewInit, Component } from '@angular/core';
 
 @Component({
     selector: 'app-after-view-child',
@@ -13,6 +8,8 @@ import {
 export class AfterViewChildComponent
     implements AfterViewInit, AfterViewChecked
 {
+    message = 'Hello from view child component !';
+
     constructor() {}
 
     ngAfterViewInit(): void {
