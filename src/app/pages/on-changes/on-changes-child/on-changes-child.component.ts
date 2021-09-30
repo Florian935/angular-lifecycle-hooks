@@ -20,12 +20,12 @@ export class OnChangesChildComponent implements OnChanges {
         console.log('OnChanges');
         console.log(JSON.stringify(changes));
 
-        for (const propName in changes) {
-            const change = changes[propName];
+        Object.keys(changes).forEach((key) => {
+            const change = changes[key];
             const to = JSON.stringify(change.currentValue);
             const from = JSON.stringify(change.previousValue);
-            const changeLog = `${propName}: changed from ${from} to ${to} `;
+            const changeLog = `${key}: changed from ${from} to ${to} `;
             this.changeLog.push(changeLog);
-        }
+        });
     }
 }
