@@ -1,1 +1,18 @@
-<p>on-changes works!</p>
+<h2>On Changes Hook</h2>
+
+<div>
+    <label for="id">ID:</label>
+    <input type="text" id="id" #id />
+</div>
+<br />
+
+<div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" #name />
+</div>
+<br />
+
+<button (click)="onClick(id.value, name.value)">Add / Update customer</button>
+
+<br />
+<app-on-changes-child [customer]="customer"></app-on-changes-child>

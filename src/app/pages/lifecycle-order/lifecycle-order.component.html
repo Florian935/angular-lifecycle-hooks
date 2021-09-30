@@ -3,12 +3,33 @@
 <p>The life cycle order is the following:</p>
 
 <ul>
-    <li>1. ngOnChanges</li>
+    <li>
+        <strong>1. ngOnChanges</strong>
+        <ul>
+            <li>
+                Called before ngOnInit() (if the component has bound inputs) and
+                whenever one or more data-bound input properties change.
+            </li>
+        </ul>
+        <br />
+    </li>
     <li>2. ngOnInit</li>
+    <br />
+
     <li>3. ngDoCheck</li>
+    <br />
+
     <li>4. ngAfterContentInit</li>
+    <br />
+
     <li>5. ngAfterContentChecked</li>
+    <br />
+
     <li>6. ngAfterViewInit</li>
+    <br />
+
     <li>7. ngAfterViewChecked</li>
+    <br />
+
     <li>8. ngOnDestroy</li>
 </ul>

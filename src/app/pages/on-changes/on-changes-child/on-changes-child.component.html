@@ -1,1 +1,9 @@
-<p>on-changes-child works!</p>
+<ng-container *ngIf="customer">
+    <div>ID: {{ customer?.id }}</div>
+    <div>Name: {{ customer?.name }}</div>
+</ng-container>
+
+<br />
+<ul>
+    <li *ngFor="let log of changeLog">{{ log }}</li>
+</ul>
