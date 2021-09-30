@@ -24,6 +24,13 @@ const routes: Routes = [
             ),
     },
     {
+        path: 'after-view',
+        loadChildren: () =>
+            import('./pages/after-view/after-view.module').then(
+                (m) => m.AfterViewModule
+            ),
+    },
+    {
         path: '',
         redirectTo: 'on-changes',
         pathMatch: 'full',
