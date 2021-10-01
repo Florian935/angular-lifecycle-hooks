@@ -1,0 +1,9 @@
+<h2>All Hooks Demo</h2>
+
+<ul>
+    <li *ngFor="let log of hooksLog">
+        {{ log }}
+    </li>
+</ul>
+
+<app-all-hooks-child [hooksLog]="hooksLog"></app-all-hooks-child>

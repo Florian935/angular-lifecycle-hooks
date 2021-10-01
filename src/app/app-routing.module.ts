@@ -31,6 +31,13 @@ const routes: Routes = [
             ),
     },
     {
+        path: 'all-hooks',
+        loadChildren: () =>
+            import('./pages/all-hooks/all-hooks.module').then(
+                (m) => m.AllHooksModule
+            ),
+    },
+    {
         path: '',
         redirectTo: 'on-changes',
         pathMatch: 'full',
